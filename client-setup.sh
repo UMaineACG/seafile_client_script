@@ -23,10 +23,12 @@ function check_root () {
 function welcome() {
     echo
     echo "--------------------------------------------------------------------------------"
+    echo
     echo " This script is will download and install the Seafile command-line client."
     echo " Please note, this script will create the necessary directories pertaining"
     echo -e " to the client's operation. Make sure you have sufficient permissions"
     echo -e " before executing this script. Press [ENTER] to continue"
+    echo
     echo "--------------------------------------------------------------------------------"
     read dummy
     echo
@@ -35,12 +37,14 @@ function welcome() {
 function goodbye() {
     echo
     echo "********************************************************************************"
+    echo
     echo " The setup is complete."
     echo -e " Your synced library can be found in the seafile-client directory."
     echo -e " To stop the seafile client, navigate to seafile-cli-4.0.4 and execute"
     echo " the following command: ./seaf-cli stop."
     echo " To restart the client, execute ./seaf-cli start."
     echo
+    echo "********************************************************************************"
 }
 
 function get_seafile_client() {
@@ -89,3 +93,4 @@ sleep .5
 initialize;
 sleep .5;
 download_library; 
+goodbye;

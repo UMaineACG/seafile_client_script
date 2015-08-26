@@ -1,8 +1,8 @@
 #!/bin/bash
 
 DATADIR="seafile-client"
-DOWNLOAD="https://bitbucket.org/haiwen/seafile/downloads/seafile-cli_4.0.4_x86-64.tar.gz"
-FILENAME="seafile-cli_4.0.4_x86-64.tar.gz"
+DOWNLOAD="https://bintray.com/artifact/download/seafile-org/seafile/seafile-cli_4.3.2_x86-64.tar.gz"
+FILENAME="seafile-cli_4.3.2_x86-64.tar.gz"
 INSTALLPATH="./seafile-cli-4.0.4"
 SEAFILE_SERVER="https://seafile.acg.maine.edu:443"
 

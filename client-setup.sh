@@ -40,7 +40,7 @@ function goodbye() {
     echo
     echo " The setup is complete."
     echo -e " Your synced library can be found in the seafile-client directory."
-    echo -e " To stop the seafile client, navigate to seafile-cli-4.0.4 and execute"
+    echo -e " To stop the seafile client, navigate to seafile-cli-4.3.2 and execute"
     echo " the following command: ./seaf-cli stop."
     echo " To restart the client, execute ./seaf-cli start."
     echo

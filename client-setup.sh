@@ -3,7 +3,7 @@
 DATADIR="seafile-client"
 DOWNLOAD="https://bintray.com/artifact/download/seafile-org/seafile/seafile-cli_4.3.2_x86-64.tar.gz"
 FILENAME="seafile-cli_4.3.2_x86-64.tar.gz"
-INSTALLPATH="./seafile-cli_4.3.2"
+INSTALLPATH="./seafile-cli-4.3.2"
 SEAFILE_SERVER="https://seafile.acg.maine.edu:443"
 
 function check_root () {

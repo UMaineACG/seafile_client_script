@@ -11,7 +11,8 @@ function check_distro () {
     # If Debian/Ubuntu, adjust certs for Seafile-CLI https
     # ----------------------------------------------------
     if [ -f /etc/debian_version ]; then
-        echo "You are running a version of Debian/Ubuntu. This script will need"
+        echo "You are running a version of Debian/Ubuntu. The Seafile-CLI checks for"
+        echo -e "links to your system certificates."
         sudo mkdir -p /etc/pki/tls/certs
         sudo cp /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
         sudo ln -s /etc/pki/tls/certs/ca-bundle.crt /etc/pki/tls/cert.pem
@@ -96,6 +97,8 @@ function download_library() {
 # Main workflow of this script 
 # -------------------------------------------
 
+check_distro;
+sleep .5
 check_root;
 sleep .5
 welcome;

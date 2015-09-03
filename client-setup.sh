@@ -9,10 +9,12 @@ SEAFILE_SERVER="https://seafile.acg.maine.edu:443"
 function check_distro () {
     # ----------------------------------------------------
     # If Debian/Ubuntu, adjust certs for Seafile-CLI https
-    # ----------------------------------------------------
-    if [ -f /etc/debian_version ]; then
+    # --------------------------------------------------
+        echo
         echo "You are running a version of Debian/Ubuntu. The Seafile-CLI checks for"
-        echo -e "links to your system certificates."
+        echo -e "system CA certificates in locations used by CentOS. This script will"
+        echo -e "now create symbolic links to your system certificates."
+        echo
         sudo mkdir -p /etc/pki/tls/certs
         sudo cp /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
         sudo ln -s /etc/pki/tls/certs/ca-bundle.crt /etc/pki/tls/cert.pem

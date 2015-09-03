@@ -6,6 +6,18 @@ FILENAME="seafile-cli_4.3.2_x86-64.tar.gz"
 INSTALLPATH="./seafile-cli-4.3.2"
 SEAFILE_SERVER="https://seafile.acg.maine.edu:443"
 
+function check_distro () {
+    # ----------------------------------------------------
+    # If Debian/Ubuntu, adjust certs for Seafile-CLI https
+    # ----------------------------------------------------
+    if [ -f /etc/debian_version ]; then
+        echo "You are running a version of Debian/Ubuntu. This script will need"
+        sudo mkdir -p /etc/pki/tls/certs
+        sudo cp /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
+        sudo ln -s /etc/pki/tls/certs/ca-bundle.crt /etc/pki/tls/cert.pem
+    fi
+}
+
 function check_root () {
     # -------------------------------------------
     # If running as root, ask the user to ensure it.

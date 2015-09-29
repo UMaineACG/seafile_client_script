@@ -95,6 +95,16 @@ function download_library() {
     cd ${INSTALLPATH}
     ./seaf-cli download -l ${libid} -s ${SEAFILE_SERVER} -d "../${DATADIR}"
 }
+function modify_bashrc() {
+    echo
+    echo 'if pgrep "ccnet" > /dev/null' >> ~/.bashrc
+    echo 'then echo "Seafile VM client sync is running"' >> ~/.bashrc
+    echo 'else cd /seafile_client_script/seafile-cli-4.3.2/' >> ~/.bashrc
+    echo '"Starting Seafile VM client sync."' >> ~/.bashrc
+    echo './seaf-cli start' >> ~/.bashrc
+    echo 'fi' >> ~/.bashrc
+    echo
+}
 
 # -------------------------------------------
 # Main workflow of this script 
@@ -111,4 +121,6 @@ sleep .5
 initialize;
 sleep .5;
 download_library; 
+sleep .5;
+modify_bashrc;
 goodbye;

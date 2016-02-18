@@ -99,7 +99,7 @@ function modify_bashrc() {
     echo
     echo 'if pgrep "ccnet" > /dev/null' >> ~/.bashrc
     echo 'then echo "Seafile VM client sync is running"' >> ~/.bashrc
-    echo 'else cd /seafile_client_script/seafile-cli-4.3.2/' >> ~/.bashrc
+    echo 'else cd /seafile-cli-4.3.2/' >> ~/.bashrc
     echo '"Starting Seafile VM client sync."' >> ~/.bashrc
     echo './seaf-cli start' >> ~/.bashrc
     echo 'fi' >> ~/.bashrc
